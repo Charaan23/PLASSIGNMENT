@@ -1,0 +1,144 @@
+/* Tooltip CSS */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    background-color: #000000;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    width: 10rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-align: center;
+  }
+  
+  .tooltip::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid #0f0f0f;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Button CSS */
+  .btn {
+    background-color: #fff;
+    color: #000000;
+    padding: 3px;
+    border-radius: 3px;
+  }
+
+  .tooltip-image {
+    display: block;
+    margin-top: 5px;
+    max-width: 100%;
+  }
+  
+  
+  /* Mobile Screen */
+  .mobile-frame {
+    width: 280px;
+    height: 500px;
+    background-color: #000000;
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  
+  .mobile-screen {
+    width: 250px;
+    height: 470px;
+    background-color: rgb(207, 203, 203);
+    border-radius: 20px; /* Rounded corners */
+    position: relative;
+    padding: 3px;
+  }
+  
+  .top-left {
+    top: 0;
+    left: 0;
+  }
+  
+  .top-right {
+    top: 0;
+    right: 0;
+  }
+  
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Tooltip Arrow */
+  .tooltip-arrow {
+    position: absolute;
+    border-style: solid;
+    transform: translateX(-50%);
+  }
+  
+  .top-left.tooltip-arrow {
+    border-color: transparent transparent #3490dc transparent;
+    top: -3px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+  
+  .top-right.tooltip-arrow {
+    border-color: transparent transparent #3490dc transparent;
+    top: -3px;
+    left: 50%;
+    transform: translate(50%, -100%);
+  }
+  
+  .bottom-left.tooltip-arrow {
+    border-color: #3490dc transparent transparent transparent;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  .bottom-right.tooltip-arrow {
+    border-color: #3490dc transparent transparent transparent;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(50%, 0);
+  }
+  
+  .center.tooltip-arrow {
+    display: none;
+  }
+  

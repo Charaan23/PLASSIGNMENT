@@ -1,0 +1,31 @@
+.btn {
+  background-color: #1a202c;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  border-style: solid;
+  width: 0;
+  height: 0;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

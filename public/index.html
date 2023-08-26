@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Tooltip CSS */
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s;
+      background-color: #3490dc;
+      color: #fff;
+      padding: 3px;
+      border-radius: 3px;
+      width: 10rem;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .tooltip::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-bottom: 3px solid #3490dc;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .tooltip-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Button CSS */
+    .btn {
+      background-color: #1a202c;
+      color: #fff;
+      padding: 3px;
+      border-radius: 3px;
+    }
+
+    /* Mobile Screen */
+    .mobile-screen {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 320px;
+      height: 480px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .corner {
+      position: absolute;
+      z-index: 1;
+      padding: 5px;
+    }
+
+    .top-left {
+      top: 0;
+      left: 0;
+    }
+
+    .top-right {
+      top: 0;
+      right: 0;
+    }
+
+    .bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+
+    .center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Image */
+    .tooltip img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 5px;
+    }
+  </style>
+  <title>Tooltip</title>
+</head>
+<body>
+  <div class="mobile-frame">
+  <div class="mx-auto max-w-3xl p-10">
+    <div class="mobile-screen">
+      <div class="corner top-left">
+        <div class="tooltip-container">
+          <button class="btn" id="top-left-button">
+            Button 1
+          </button>
+        </div>
+      </div>
+
+      <div class="corner top-right">
+        <div class="tooltip-container">
+          <button class="btn" id="top-right-button">
+            Button 2
+          </button>
+        </div>
+      </div>
+
+      <div class="corner bottom-left">
+        <div class="tooltip-container">
+          <button class="btn" id="bottom-left-button">
+            Button 4
+          </button>
+        </div>
+      </div>
+
+      <div class="corner bottom-right">
+        <div class="tooltip-container">
+          <button class="btn" id="bottom-right-button">
+            Button 5
+          </button>
+        </div>
+      </div>
+
+      <div class="corner center">
+        <div class="tooltip-container">
+          <button class="btn" id="center-button">
+            Button 3
+          </button>
+          <span class="tooltip">Tooltip text goes here</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
